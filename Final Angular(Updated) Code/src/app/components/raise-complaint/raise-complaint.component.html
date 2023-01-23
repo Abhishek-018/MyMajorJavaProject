@@ -1,0 +1,37 @@
+<h1 mat-diaglog-title>Complaint Form</h1>
+<div mat-dialog-content>
+    <form [formGroup]="addComplaintForm">
+
+        <mat-form-field appearance="outline">
+            <mat-label>Select Event</mat-label>
+            <mat-select name="event" formControlName="event" placeholder="event" required>
+                <mat-option *ngFor="let event of events" [value]="event">{{event.eventName}}</mat-option>
+
+            </mat-select>
+        </mat-form-field>
+
+
+        <mat-form-field appearance="fill">
+            <mat-label>Describe accurately the details of your complaint.</mat-label>
+            <textarea matInput required formControlName="complaintDescription"></textarea>
+        </mat-form-field>
+
+
+        <mat-form-field appearance="outline" [hidden]="true">
+            <mat-label>Status</mat-label>
+            <mat-select name="event" formControlName="approval" placeholder="Status">
+                <mat-select value="Status Pending">
+                    <mat-option value="Status Pending">Status Pending</mat-option>
+                    <mat-option value="No">No</mat-option>
+                </mat-select>
+            </mat-select>
+        </mat-form-field>
+        <div mat-dialog-actions [align]="'end'">
+            <button id="add-employee-form" mat-raised-button color="warn" mat-dialog-close>Close</button>
+            <button [disabled]="addComplaintForm.invalid" (click)="addComplaint()" mat-raised-button color="primary"
+                mat-dialog-close>Submit</button>
+        </div>
+
+
+    </form>
+</div>

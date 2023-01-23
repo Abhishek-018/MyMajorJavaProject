@@ -1,0 +1,223 @@
+<app-usernavbar></app-usernavbar>
+<br><br>
+
+<body style="background-color: #f4f4f4; margin: 0 !important; padding: 0 !important;">
+
+   
+
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+
+       
+
+        <tr>
+
+            <td bgcolor="#444" align="center">
+
+                <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;">
+
+                    <tr>
+
+                        <td align="center" valign="top" style="padding: 40px 10px 40px 10px;"> </td>
+
+                    </tr>
+
+                </table>
+
+            </td>
+
+        </tr>
+
+        <tr>
+
+            <td bgcolor="#444" align="center" style="padding: 0px 10px 0px 10px;">
+
+                <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;">
+
+                    <tr>
+
+                        <td bgcolor="#ffffff" align="center" valign="top"
+
+                            style="padding: 30px 20px 20px 20px; border-radius: 4px 4px 0px 0px; color: Black; font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 48px; font-weight: 400; letter-spacing: 4px; line-height: 48px;">
+
+                            <h1 style="font-size: 48px; font-weight: 400; margin: 2;">Confirmation Form</h1> <img
+
+                                src=" https://img.icons8.com/clouds/100/000000/handshake.png" width="125" height="80"
+
+                                style="display: block; border: 0px;" />
+
+                        </td>
+
+                    </tr>
+
+                </table>
+
+            </td>
+
+        </tr>
+
+        <tr>
+
+            <td bgcolor="#f4f4f4" align="center" style="padding: 0px 10px 0px 10px;">
+
+                <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;">
+
+                    <tr>
+
+                        <div class="box">
+
+                            <h2>Confirm Booking</h2>
+
+                            <form [formGroup]="addBookingForm">
+
+                              <div class="inputBox" hidden>
+
+                                <label>Id</label><br>
+
+                                <input type="text" name="eventId" formControlName="event" matInput placeholder="Placeholder" [(ngModel)]="events" readonly>
+
+                               
+
+                              </div>
+
+                             
+
+                              <div class="inputBox">
+
+                                <label>Name</label><br>
+
+                                <input type="text" name="eventName" formControlName="eventName" matInput placeholder="Placeholder" [(ngModel)]="events.eventName" readonly>
+
+                               
+
+                              </div>
+
+                             
+
+                              <div class="inputBox">
+
+                                <label>Offer</label><br>
+
+                                <input type="text"  name="offer" formControlName="offer" matInput placeholder="Placeholder" [(ngModel)]="events.offer.offerDescription"  readonly>
+
+                             
+
+                              </div>
+
+
+
+                              <div class="inputBox">
+
+                                <label>Price</label><br>
+
+                                <input type="text" name="eventPrice" formControlName="eventPrice" matInput placeholder="Placeholder"  [(ngModel)]="events.eventPrice" readonly>
+
+                               
+
+                              </div>
+
+
+
+                              <div class="inputBox">
+
+                                <label>Location</label><br>
+
+                                <input type="text" name="eventLocation" formControlName="eventLocation" matInput placeholder="Placeholder" [(ngModel)]="events.eventLocation" readonly>
+
+                               
+
+                              </div>
+
+
+
+                              <div class="inputBox">
+
+                                <label>Date</label><br>
+
+                                <input type="text" name="eventDate" formControlName="eventDate" matInput placeholder="Placeholder" [(ngModel)]="events.eventDate" readonly>
+
+                               
+
+                              </div>
+
+
+
+                              <div class="inputBox">
+
+                                <label>Description</label><br>
+
+                                <input type="text"name="eventDetails" formControlName="eventDetails" matInput placeholder="Placeholder"[(ngModel)]="events.eventDetails" readonly>
+
+                               
+
+                              </div>
+
+                              <div class="inputBox" hidden>
+                                <mat-form-field appearance="outline" [hidden]="true">
+                                    <mat-label>Status</mat-label>
+                                    <mat-select name="event" formControlName="status" placeholder="Status">
+                                        <mat-select value="Status Pending">
+                                            <mat-option value="Status Pending">Status Pending</mat-option>
+                                            
+                                        </mat-select>
+                                    </mat-select>
+                                </mat-form-field>
+
+                                
+                               
+
+                              </div>
+
+                              <input hidden [(ngModel)] = "register" formControlName="registrationdemo">
+
+
+
+
+
+                              <input hidden [(ngModel)] = "events.registrationdemo" formControlName="organizerId">
+
+
+
+                              
+
+
+
+                              <button  id="addBookingForm" mat-raised-button color="warn" (click)="cancelNavigate()"mat-dialog-close>Cancel</button>
+
+
+
+        <button style="margin-left: 8px;" mat-raised-button color="primary" (click)="userBookingConfirm()" mat-dialog-close>Confirm</button>
+
+                            </form>
+
+                          </div>
+
+                    </tr>
+
+
+
+                </table>
+
+            </td>
+
+        </tr>
+
+     
+
+
+        <tr>
+
+            <td bgcolor="#f4f4f4" align="center" style="padding: 0px 10px 0px 10px;">
+
+                <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;">
+
+
+
+                </table>
+
+            </td>
+
+        </tr>
+
+    </table>
+
+</body>

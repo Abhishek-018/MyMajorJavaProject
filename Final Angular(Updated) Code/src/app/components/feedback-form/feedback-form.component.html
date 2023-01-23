@@ -1,0 +1,30 @@
+
+
+
+<h1 mat-diaglog-title style="text-align: center;">Feedback Form</h1>
+<div mat-dialog-content>
+
+   <form  [formGroup]="feedbackForm" >
+    
+
+   <h1>Input Rating</h1>
+  <ngb-rating [max]="5"  name = "rating" formControlName="rating"></ngb-rating> 
+  <br><br>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Add Comment</mat-label>
+    <textarea matInput formControlName="feedbackDescription"></textarea>
+  </mat-form-field>
+
+   
+
+   
+   </form>
+
+    <div mat-dialog-actions [align] ="'end'">
+        <button id = "add-employee-form" mat-raised-button color="warn" mat-dialog-close>Cancel</button>
+        <button [disabled]="feedbackForm.invalid"  mat-raised-button color="primary" (click) = "addFeedback()" mat-dialog-close>Submit</button>
+       
+    </div>
+    
+</div>

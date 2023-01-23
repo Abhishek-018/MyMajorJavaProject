@@ -1,0 +1,100 @@
+<app-organizernavbar></app-organizernavbar>
+<section class="vh-100" style="background-color: #eee;">
+    <div class="container h-100" style="margin-top: 2rem;">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-lg-12 col-xl-11">
+                <div class="card text-black" style="border-radius: 25px;">
+                    <div class="card-body p-md-5">
+                        <div class="row justify-content-center">
+                            <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
+
+                                <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Edit Event</p>
+
+
+                                <form class="mx-1 mx-md-4" [formGroup]="editForm" (ngSubmit)="update()" >
+                                    <div class="d-flex flex-row align-items-center mb-4">
+                                        <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+                                        <div disabled class="form-outline flex-fill mb-0">
+
+                                            <label hidden class="form-label" for="form3Example1c">Event Id</label>
+                                            <input  hidden type="text"  name="eventId" class="form-control" 
+                                                formControlName="eventId" [(ngModel)]="event.eventId" />
+
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex flex-row align-items-center mb-4">
+                                        <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+                                        <div class="form-outline flex-fill mb-0">
+                                            <label class="form-label" for="form3Example1c">Event Name</label>
+                                            <input type="text" name="eventName" class="form-control"
+                                                formControlName="eventName" [(ngModel)]="event.eventName" />
+
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex flex-row align-items-center mb-4">
+                                        <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+                                        <div class="form-outline flex-fill mb-0">
+                                            <label class="form-label" for="form3Example4c">Event Price</label>
+                                            <input type="text" name="eventPrice" class="form-control"
+                                                formControlName="eventPrice" [(ngModel)]="event.eventPrice" />
+
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex flex-row align-items-center mb-4">
+                                        <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+                                        <div class="form-outline flex-fill mb-0">
+                                            <label class="form-label" for="form3Example4c">Event Location</label>
+                                            <input type="text" name="eventLocation" class="form-control"
+                                                formControlName="eventLocation" [(ngModel)]="event.eventLocation" />
+
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex flex-row align-items-center mb-4">
+                                        <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+                                        <div class="form-outline flex-fill mb-0">
+                                            <label class="form-label" for="form3Example4c">Event Date</label>
+                                            <input type="date" name="eventDate" class="form-control"
+                                                formControlName="eventDate" [(ngModel)]="event.eventDate" />
+
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex flex-row align-items-center mb-4">
+                                        <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+                                        <div class="form-outline flex-fill mb-0">
+                                            <label class="form-label" for="form3Example4c">Event Details</label>
+                                            <textarea name="eventDetails" class="form-control"
+                                                formControlName="eventDetails" [(ngModel)]="event.eventDetails"></textarea>
+
+                                        </div>
+                                    </div>
+                                   
+
+                                    <br><br>
+                                    <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+                                        <button (click) = "cancel()" class="btn btn-danger btn-lg ms-2">Cancel</button>
+                                        <button  style="margin-left: 8px;" type="submit" class="btn btn-primary btn-lg" value="submit"
+                                            [disabled]="!editForm.valid">Update </button>
+                                    </div>
+
+                                </form>
+                            </div>
+                            <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-right order-1 order-lg-2" >
+
+                                <img src="../assets/update.jfif" class="img-fluid" alt="Sample image">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</section>

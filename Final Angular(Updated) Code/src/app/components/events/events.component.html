@@ -1,0 +1,27 @@
+<app-organizernavbar></app-organizernavbar>
+<br><br>
+<div class="row row-cols-1 row-cols-md-2 g-4">
+    <div *ngFor="let event of events ">
+        <div class="col">
+            <div class="card ">
+
+                <div class="card-body">
+                    <h2 class="card-title">Event Name: {{event.eventName}}</h2>
+                    <h2 class="card-text">Category Name: {{event.category.categoryName}}</h2>
+                   
+                    <h2 class="card-text">Event Price: {{event.eventPrice}}</h2>
+                    <h2 class="card-text">Event Location: {{event.eventLocation}}</h2>
+                    <h2 class="card-text">Event Date: {{event.eventDate}}</h2>
+                    <h2 class="card-text">Event Offer: {{event.offer.offerName}}</h2>
+                    <h2 class="card-text">Offer Description: {{event.offer.offerDescription}}</h2>
+                    <h2 class="card-text">Event Description: {{event.eventDetails}}</h2>
+
+                   
+                    <a href="#" routerLink="/edit/{{event.eventId}}" class="btn btn-primary">Edit</a> &nbsp;
+                    <a href="#" routerLink="/delete/{event.eventId}}" class="btn btn-danger"
+                        (click)="delete(event.eventId)">Delete</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

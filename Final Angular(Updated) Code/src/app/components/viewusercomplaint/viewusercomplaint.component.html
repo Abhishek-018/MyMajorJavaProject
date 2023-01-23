@@ -1,0 +1,29 @@
+<app-usernavbar></app-usernavbar>
+<br>
+<div >
+    <div class="container mt-5">
+        <table class="table">
+            <thead>
+                <tr>
+
+                    <th scope="col">Event Name</th>
+                    <th scope="col">Complaint Description</th>
+                    <th scope="col">Complaint Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let complaint of complaints">
+
+                    <td>{{complaint.event.eventName}}</td>
+                    <td>{{complaint.complaintDescription}}</td>
+                    <td style="color: red;">{{complaint.approval}}</td>
+                </tr>
+
+
+            </tbody>
+        </table>
+
+    </div>
+</div>
+
+<ng-template #block>No Record Found</ng-template>

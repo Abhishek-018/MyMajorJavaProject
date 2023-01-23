@@ -1,0 +1,31 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+
+  mat-toolbar{
+    background: black;
+    color:#fff
+  }
+
+  mat-sidenav-container{
+    height:100%
+  }
+
+  mat-sidenav ,
+  mat-sidenav-content{
+    padding: 16px;
+  }
+
+  mat-sidenav{
+    background-color: whitesmoke;
+    width:200px;
+  }
+
+  .name{
+    text-align: center;
+  }
+
+
+  .usersidenav{
+    height: 1000px;
+  }

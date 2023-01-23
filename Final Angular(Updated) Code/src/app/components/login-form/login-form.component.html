@@ -1,0 +1,38 @@
+<h1 mat-diaglog-title style="text-align: center;">Login Form</h1>
+<div mat-dialog-content>
+
+   <form  [formGroup]="loginForm" (ngSubmit)="Login()">
+    
+
+    <mat-form-field appearance="fill">
+        <mat-label>Enter your email</mat-label>
+        <mat-icon> email</mat-icon>
+        <input  name = "email" formControlName="email" matInput placeholder="pat@example.com" required>
+        <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Enter your password</mat-label>
+        <input name = "password" formControlName="password"  type="password" matInput [type]="hide ? 'password' : 'text'" required>
+        <mat-icon matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+
+        </mat-icon>
+        
+      </mat-form-field>
+
+
+
+   
+
+   
+   </form>
+
+    <div mat-dialog-actions [align] ="'end'">
+        <button id = "add-employee-form" mat-raised-button color="warn" mat-dialog-close>Cancel</button>
+        <button [disabled]="loginForm.invalid"  mat-raised-button color="primary" (click) = "Login()" mat-dialog-close>Login</button>
+        <!-- <input type="submit" value="Login"> -->
+    </div>
+    <p>Not a user?</p>
+</div>
+<button id = "add-employee-form" mat-raised-button color="warn"(click) = "openDialog()" mat-dialog-close>Register</button>

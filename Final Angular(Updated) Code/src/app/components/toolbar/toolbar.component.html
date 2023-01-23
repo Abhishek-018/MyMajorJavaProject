@@ -1,0 +1,59 @@
+<mat-toolbar>
+  <mat-toolbar-row>
+    <button (click)="opened=!opened" mat-icon-button color="accent">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <h1>Event Managment System</h1>
+    <span class="example-spacer"></span>
+    <button mat-raised-button color="warn" (click)="Logout()">Logout</button>
+  </mat-toolbar-row>
+
+  <span class="example-spacer"></span>
+
+
+
+
+
+</mat-toolbar>
+
+
+
+<mat-sidenav-container>
+
+  <mat-sidenav #sidenav mode="push" [(opened)]="opened">
+    <h2>Menu</h2>
+
+
+    <mat-divider></mat-divider>
+
+    <mat-nav-list>
+      <mat-list role="list">
+
+        <!-- <mat-list-item role="listitem" routerLink="/home">Home</mat-list-item> -->
+        <mat-list-item role="listitem" routerLink="/addCategory">Add Category</mat-list-item>
+        <mat-list-item role="listitem" routerLink="/viewCategory">View Category</mat-list-item>
+        <mat-list-item role="listitem" routerLink="/memberList">Members List</mat-list-item>
+      </mat-list>
+    </mat-nav-list>
+
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div class="sidecontent">
+
+      
+      
+      <!-- <router-outlet></router-outlet> -->
+     
+
+
+    </div>
+
+
+
+
+
+  </mat-sidenav-content>
+
+
+
+</mat-sidenav-container>

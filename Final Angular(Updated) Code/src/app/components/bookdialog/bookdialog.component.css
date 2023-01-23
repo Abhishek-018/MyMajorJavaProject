@@ -1,0 +1,177 @@
+/* mat-form-field {
+    width: 80%;
+    
+}
+.example-container mat-form-field + mat-form-field {
+    margin-left: 8px;
+}
+mat-icon {
+    float: right;
+}
+
+mat-dialog-content{
+height: 100%;
+} */
+
+body,
+
+table,
+
+td,
+
+table,
+
+table {
+
+    margin-top: 20px;
+
+    border-collapse: collapse !important;
+
+}
+
+
+
+body {
+
+ 
+
+    height: 100% !important;
+
+    margin: 0 !important;
+
+    padding: 0 !important;
+
+    width: 100% !important;
+
+}
+
+
+
+
+
+.box {
+
+position: absolute;
+
+top: 100%;
+
+left: 50%;
+
+transform: translate(-50%, -50%);
+
+width: 35rem;
+
+padding: 2.5rem;
+
+box-sizing: border-box;
+
+background: rgba(0, 0, 0, 0.6);
+
+border-radius: 0.625rem;
+
+}
+
+
+
+.box h2 {
+
+margin: 0 0 1.875rem;
+
+padding: 0;
+
+color: #fff;
+
+text-align: center;
+
+font-size: x-large;
+
+}
+
+
+
+.box .inputBox {
+
+position: relative;
+
+}
+
+
+
+.box .inputBox input {
+
+width: 100%;
+
+padding: 0.625rem 0;
+
+font-size: 1rem;
+
+color: #fff;
+
+letter-spacing: 0.062rem;
+
+margin-bottom: 1.875rem;
+
+border: none;
+
+border-bottom: 0.065rem solid #fff;
+
+outline: none;
+
+background: transparent;
+
+}
+
+
+
+.box .inputBox label {
+
+position: absolute;
+
+top: 0;
+
+left: 0;
+
+padding: 0.625rem 0;
+
+font-size: 1rem;
+
+color: #fff;
+
+pointer-events: none;
+
+transition: 0.5s;
+
+}
+
+
+
+
+
+.box input[type="submit"] {
+
+border: none;
+
+outline: none;
+
+color: #fff;
+
+background-color: #03a9f4;
+
+padding: 0.625rem 1.25rem;
+
+cursor: pointer;
+
+border-radius: 0.312rem;
+
+font-size: 1rem;
+
+}
+
+
+
+.box input[type="submit"]:hover {
+
+background-color: #1cb1f5;
+
+}
+

@@ -1,0 +1,67 @@
+<nav class="navbar navbar-expand-lg bg-dark" style="height: 80px;margin-bottom: 25px;">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#" style="color: white;font-size: xx-large;">Book My Event</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+
+        <form class="d-flex" role="events">
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" routerLink="/viewUserEvent">View Event</a>
+                    </li>&nbsp;&nbsp;&nbsp;&nbsp;
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" routerLink="/viewUserbookings">View Booking</a>
+                    </li>&nbsp;&nbsp;
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" routerLink="/userComplaint">Raise Complaint</a>
+                    </li>&nbsp;&nbsp;
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" routerLink="/viewUserComplaints">View Complaints</a>
+                    </li>&nbsp;&nbsp;
+
+                    <li class="nav-item">
+                        <div class="row">
+                            <div class="col">
+                               <div ngbDropdown class="d-inline-block">
+                                  <button type="button" class="btn btn-outline-light" id="dropdownBasic1" ngbDropdownToggle>
+                                        <img style="height: 30px; width: 50px;" src="https://img.icons8.com/3d-fluency/94/null/manager.png" />
+                                    </button>
+                                    <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                                        <a ngbDropdownItem > Hello {{user.firstName}}!</a>
+                                        <a routerLink="/updateUserProfile" ngbDropdownItem>Update Profile</a>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                        </li>
+                   <!--  <li class="nav-item">
+                        <h2 style="color: white;">Hello {{username}}!</h2>
+                    </li>&nbsp;&nbsp; -->
+
+                    <li class ="nav-item">
+                        <button style ="margin-left: 10px;" mat-raised-button  color="warn" class="logout" (click)="Logout()">Logout</button>
+                    </li>
+
+
+
+
+
+
+                </ul>
+
+            </div>
+        </form>
+    </div>
+
+</nav>
+
+<!-- <router-outlet></router-outlet> -->

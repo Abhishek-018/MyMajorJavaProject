@@ -1,0 +1,90 @@
+<body>
+    <div class="form-body">
+      <div class="row">
+        <div class="form-holder">
+          <div class="form-content">
+            <div class="form-items">
+              <h3>Register </h3>
+              <p>Fill in the data below.</p>
+              <form class="requires-validation" novalidate [formGroup]="registerForm" (ngSubmit)="Register()">
+  
+                <div class="col-md-16">
+                  <label>First Name:</label>
+                  <input class="form-control" type="text" name="firstName" formControlName="firstName" required>
+                  <div class="error" class="text-danger"
+                    *ngIf="registerForm.controls['firstName'].hasError('required') && registerForm.controls['firstName'].touched">
+                    Please enter First Name </div>
+                </div>
+          
+  
+            <div class="col-md-12">
+              <label>Last Name:</label>
+              <input class="form-control" type="text" name="lastName" formControlName="lastName" required>
+              <div class="error" class="text-danger"
+                *ngIf="registerForm.controls['lastName'].hasError('required') && registerForm.controls['lastName'].touched">
+                Please enter Last Name </div>
+            </div>
+  
+  
+            <div class="col-md-12">
+              <label>Email:</label>
+              <input class="form-control" type="email" name="email" formControlName="email"
+                required>
+              <div class="error" class="text-danger"
+                *ngIf="registerForm.controls['email'].hasError('required') && registerForm.controls['email'].touched">
+                Please enter Email </div>
+            </div>
+  
+            <div class="col-md-12">
+              <label>Password:</label>
+              <input class="form-control" type="password" name="password" formControlName="password" required>
+              <div class="error" class="text-danger"
+                *ngIf="registerForm.controls['password'].hasError('required') && registerForm.controls['password'].touched">
+                Please enter password </div>
+            </div>
+  
+            <div class="col-md-12">
+              <label>Role:</label>
+              <select class="form-select mt-3" required formControlName="role">
+                
+                <option >Select Role</option>
+                <option value="Organizer">Organizer</option>
+                <option value="User">User</option>
+                <!--  <option *ngFor="let event of categories" [value]="event">{{ event.categoryName }}
+                              </option> -->
+              </select>
+              <div class="error" class="text-danger"
+                *ngIf="registerForm.controls['role'].hasError('required') && registerForm.controls['role'].touched">
+                Please select Role </div>
+            </div>
+  
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="form-group">
+                  <label>Contact Number:</label>
+                  <div class="input-group"> <input class="form-control" type="text" 
+                      formControlName="contactNumber"> </div>
+                </div>
+              </div>
+              <div class="error" class="text-danger"
+                *ngIf="registerForm.controls['contactNumber'].hasError('required') && registerForm.controls['contactNumber'].touched">
+                Please enter number </div>
+            </div>
+  
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+              <label class="form-check-label">I confirm that all data are correct</label>
+              <div class="invalid-feedback">Please confirm that the entered data are all correct!</div>
+            </div>
+  
+  
+            <div class="form-button mt-3">
+              <button id="submit" type="submit" class="btn btn-primary">Register</button>
+            </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </body>

@@ -1,0 +1,75 @@
+ <app-organizernavbar></app-organizernavbar>
+<!--<div *ngIf="offer.length!=0; else block">
+    <div class="container mt-5">
+        <div>
+            <table class="table table-dark table-striped">
+                <thead>
+                    <tr>
+                     Comment <th>EventOffer ID</th> Comment
+                    <th>EventOffer Name</th>
+                    <th>EventOffer Description</th>
+                    <th colspan="2">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let offers of offer">
+                    Comment <td>{{offers.offerId}}</td> Comment
+                    <td>{{offers.offerName}}</td>
+                    <td>{{offers.offerDescription}}</td>
+                    <td><a class="btn btn-primary" routerLink="/editOffer/{{offers.offerId}}">Edit</a></td>
+                    <td><a class="btn btn-danger" (click)="deleteOffer(offers.offerId)">Delete</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <a class="btn btn-primary">Back</a>
+    </div>  
+  
+</div>
+
+<ng-template #block>No Record Found</ng-template> -->
+
+<!--Material Table-->
+<div class="container">
+    <div>
+      <table mat-table [dataSource]="offer" class="mat-elevation-z8">
+  
+
+  
+       
+        <ng-container matColumnDef="offerName">
+          <th mat-header-cell *matHeaderCellDef> Event Offer Name </th>
+          <td mat-cell *matCellDef="let element"> {{element.offerName}} </td>
+        </ng-container>
+  
+        <ng-container matColumnDef="offerDescription">
+          <th mat-header-cell *matHeaderCellDef> Event Offer Description </th>
+          <td mat-cell *matCellDef="let element"> {{element.offerDescription}} </td>
+        </ng-container>
+  
+       
+  
+       
+        <ng-container matColumnDef="action">
+          <th mat-header-cell *matHeaderCellDef> Action </th> 
+          <td mat-cell *matCellDef="let element">
+
+            <button routerLink="/editOffer/{{element.offerId}}" mat-icon-button color="primary">
+                <mat-icon>edit</mat-icon>
+              </button>
+           
+            <button (click)="deleteOffer(element.offerId)"  mat-icon-button color="warn">
+              <mat-icon>delete</mat-icon>
+            </button>
+           
+  
+  
+          </td>
+        </ng-container>
+  
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+  
+    </div>
+  </div>

@@ -1,0 +1,64 @@
+<h1 mat-diaglog-title style="text-align: center;">Register Form</h1>
+<div mat-dialog-content>
+
+    <form [formGroup]="registerForm">
+        <mat-form-field appearance="outline">
+            <mat-label>Enter First Name</mat-label>
+            <input name="firstname" formControlName="firstName" matInput placeholder="Placeholder" required>
+
+            <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        <mat-hint>Hint</mat-hint> -->
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Enter Last Name</mat-label>
+            <input name="lastname" formControlName="lastName" matInput placeholder="Placeholder" required>
+
+
+
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Enter your email</mat-label>
+            <mat-icon> email</mat-icon>
+            <input name="email" formControlName="email" matInput placeholder="pat@example.com" required>
+            <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Enter your password</mat-label>
+            <input name="password" formControlName="password" matInput [type]="hide ? 'password' : 'text'" required>
+            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                [attr.aria-pressed]="hide">
+                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Select Role</mat-label>
+            <mat-select name="role" formControlName="role" placeholder="Category" required>
+                <mat-option value="User">User</mat-option>
+                <mat-option value="organizer">Event organizer</mat-option>
+            </mat-select>
+        </mat-form-field>
+
+
+        <mat-form-field appearance="fill">
+            <mat-label>Enter your Contact Number</mat-label>
+            <mat-icon> phone</mat-icon>
+            <input name="contactNumber" formControlName="contactNumber" matInput placeholder="Placeholder" required>
+
+            <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
+        </mat-form-field>
+
+
+    </form>
+
+    <div mat-dialog-actions [align]="'end'">
+        <button id="add-employee-form" mat-raised-button color="warn" mat-dialog-close>Cancel</button>
+        <button [disabled]="registerForm.invalid" mat-raised-button color="primary" (click)="Register()"
+            mat-dialog-close>Submit</button>
+    </div>
+    <p>Already a User?</p>
+</div>
+<button id="add-employee-form" mat-raised-button color="warn" (click)=" openLogin()" mat-dialog-close>Login</button>
